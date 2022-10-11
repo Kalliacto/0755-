@@ -1,0 +1,803 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul,
+ol {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 36px;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    max-width: 100vw;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5rem;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul,
+ol {
+    list-style: none;
+    margin-bottom: 50px;
+}
+
+ul li {
+    margin: 20px 0 0 25px;
+}
+
+li:first-letter {
+    text-transform: uppercase;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: rgb(253, 252, 252);
+}
+
+.wrapper {
+    width: 100vw;
+
+}
+
+
+/*----------------- Тёмная тема-------------------------*/
+.dark-theme {
+    color: #f2f2f2;
+    background-color: #373737;
+}
+
+.dark-theme .header {
+    background-color: #2a2930;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+.dark-theme .nav-link {
+    color: #ffffff;
+}
+
+.dark-theme .theme-button {
+    color: #a8a8a8;
+    border: 1px solid #a8a8a8;
+}
+
+.dark-theme .theme-button:hover {
+    color: #17161a;
+    background-color: #868686;
+}
+
+.dark-theme .card {
+    background-color: #2a2930;
+    border: 1px solid white;
+}
+
+.dark-theme .wrapper_about_me {
+    background-color: #2a2930;
+}
+
+.dark-theme .about_me {
+    background-color: #373737;
+    border: 1px solid white;
+}
+
+.dark-theme .p {
+    background-color: #2a2930;
+}
+
+.dark-theme .footer {
+    background-color: #2a2930;
+    color: #f2f2f2;
+
+}
+
+.dark-theme .login {
+    color: #f2f2f2;
+}
+
+/* --------------header------------------ */
+.header {
+    background-color: rgba(205, 205, 205, 1);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header_container {
+    margin: 0 auto;
+    display: flex;
+    min-height: 104px;
+    align-items: center;
+    text-align: center;
+}
+
+.img_logo {
+    max-width: 210px;
+    max-height: 40px;
+}
+
+.menu_list {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.login {
+    font-size: 36px;
+    margin-right: 10px;
+    color: #737373;
+}
+
+@media (max-width: 479px) {
+    .header_container {
+        min-height: 75px;
+    }
+
+    .img_logo {
+        max-width: 110px;
+        max-height: 20px;
+    }
+}
+
+.header_menu {
+    margin: 0 0 0 103px;
+    padding: 5px 0;
+}
+
+@media (max-width: 992px) {
+    .header_menu {
+        margin: 0 0 0 80px;
+    }
+}
+
+@media (max-width: 767px) {
+    .header_menu {
+        margin: 0 0 0 40px;
+    }
+}
+
+@media (max-width: 479px) {
+    .header_menu {
+        margin: 0 0 0 20px;
+    }
+}
+
+.menu_item {
+    margin-right: 15px;
+}
+
+.menu_link {
+    color: #737373;
+    font-weight: 600;
+    font-size: 20px;
+    /*---Вычисляем % 24/14*100=line-height: 171%;----или---*/
+    line-height: calc(24 / 14 *100%);
+}
+
+.menu_link:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 479px) {
+    .menu_link {
+        font-size: 16px;
+        color: #313131;
+    }
+}
+
+/*--------------Для темы---------------------*/
+.theme {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.theme-button {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    color: #737373;
+    font-weight: 600;
+    border: 1px solid #737373;
+}
+
+.theme-button:active {
+    opacity: 0.8;
+}
+
+.theme-button:hover {
+    color: #ffffff;
+    background-color: #616161;
+}
+
+/*-----------recipe_day---------*/
+.title {
+    font-size: 40px;
+    text-align: center;
+    margin: 50px auto 30px;
+}
+
+.title h2 {
+    font-weight: bold;
+}
+
+
+.button_detailed_recipe {
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: rgba(255, 135, 24, 1);
+    color: aliceblue;
+    text-align: center;
+    align-items: center;
+    padding: 5px;
+    border: solid 1px gray;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+    margin: 10px 0 10px 10px;
+}
+
+.button_detailed_recipe:hover {
+    cursor: pointer;
+    background-color: rgb(182, 107, 36);
+}
+
+.recipe_day_body {
+    margin-left: 15px;
+
+}
+
+.recipe_title {
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.recipe_day_text {
+    /* margin-bottom: 20px; */
+    font-size: 18px;
+}
+
+.button_one {
+    margin-top: 50px;
+}
+
+@media (max-width: 575.98px) {
+    .recipe_day {
+        max-width: 360px;
+        padding: 5px;
+        margin: 10px auto;
+    }
+
+    .title h2 {
+        font-size: 32px;
+        margin-bottom: 5px;
+    }
+}
+
+/*----------picture-----------*/
+
+.picture {
+    width: 100%;
+    margin: 40px 0 60px 0;
+    padding: 10px;
+}
+
+@media (max-width: 767px) {
+    .picture {
+        display: none;
+    }
+}
+
+/*---------new_recipe-----------*/
+
+.new_recipe_title p {
+    font-size: 18px;
+
+}
+
+.title_new_recipe {
+    margin-top: 20px;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.new_recipe_title {
+    font-weight: bold;
+}
+
+.card {
+    width: 36rem;
+}
+
+@media (max-width: 992px) {
+    .new_recipe_wrapper {
+        margin: 0 auto;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+
+    .new_recipe_title h2 {
+        font-size: 28px;
+    }
+
+    .new_recipe_title h4 {
+        font-size: 20px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .new_recipe_wrapper {
+        padding: 5px;
+
+    }
+
+    .new_recipe h2 {
+        font-size: 28px;
+    }
+
+    .title_new_recipe h4 {
+        font-size: 20px;
+    }
+
+    .card {
+        max-width: 28rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .card {
+        max-width: 22rem;
+    }
+
+    .recipe_day_body {
+        padding: 5px;
+
+    }
+
+    .recipe_title {
+        margin: 5px;
+    }
+}
+
+/*-------about_me---------*/
+.wrapper_about_me {
+    margin: 0 auto;
+    background-color: rgba(205, 205, 205, 1);
+    padding: 20px;
+}
+
+.about_me {
+    background-color: white;
+    margin: 70px auto;
+    max-width: 940px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    position: relative;
+}
+
+.img_about_me {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.about_body {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.title_about {
+    font-weight: bold;
+    padding: 5px;
+    line-height: 150%;
+    margin: 5px 0 20px 0;
+    font-size: 40px;
+}
+
+.about_text {
+    height: 80%;
+    overflow: auto;
+    font-size: 18px;
+    padding: 10px;
+}
+
+
+@media (max-width: 992px) {
+    .about_me {
+        margin: 40px auto;
+        max-width: 640px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+
+    .title_about {
+        font-size: 24px;
+    }
+
+    .about_text {
+        height: 100%;
+        overflow: auto;
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    .wrapper_about_me {
+        padding: 10px;
+    }
+
+    .img_about_me {
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 767px) {
+    .wrapper_about_me {
+
+        margin-bottom: 20px;
+    }
+
+    .about_me {
+        max-width: 540px;
+        padding: 10px;
+        margin: 20px auto;
+    }
+
+    .about_body {
+        padding: 5px;
+    }
+
+    .title_about {
+        font-size: 30px;
+        font-size: 14px;
+    }
+
+    .img_about_me {
+        display: none;
+    }
+
+    .title_about {
+        font-size: 24px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .about_me {
+        max-width: 360px;
+        padding: 10px;
+        margin: 20px auto;
+    }
+}
+
+/*-------------interesting_cooking------------*/
+.interesting_cooking {
+    max-height: 600px;
+    margin-bottom: 50px;
+}
+
+.wrapper_interesting_cooking {
+    margin: 0px auto;
+}
+
+@media (max-width: 992px) {
+    .wrapper_interesting_cooking {
+        margin: 10px auto;
+    }
+
+    .interesting_cooking {
+        margin: 25px auto;
+        max-height: 300px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .interesting_cooking {
+        display: none;
+    }
+}
+
+/*----------------footer--------------------*/
+
+.footer {
+    margin: 0 auto;
+    height: 250px;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(205, 205, 205, 1);
+    padding: 20px;
+}
+
+.footer_text_body {
+    margin: 20px 0 40px 0;
+}
+
+.footer_title {
+    padding: 10px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.footer_text {
+    font-size: 36px;
+    padding: 10px;
+}
+
+.icons {
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.icon_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    margin-left: 20px;
+    margin-top: -20px;
+    border-radius: 5px;
+    font-size: 36px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.icon_item:hover {
+    cursor: pointer;
+    width: 56px;
+    height: 56px;
+    color: antiquewhite;
+    font-size: 24px;
+}
+
+@media (max-width: 992px) {
+    .footer_title {
+        font-size: 36px;
+    }
+
+    .footer_text {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer_title {
+        font-size: 28px;
+    }
+
+    .footer_text {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .footer_title {
+        font-size: 26px;
+    }
+
+    .footer_text {
+        font-size: 16px;
+    }
+
+    .icon_item {
+        width: 38px;
+        height: 38px;
+        font-size: 28px;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+}
+
+/*---------------culinary_dictionary-text---------------------------*/
+
+.culinary_dictionary {
+    width: 900px;
+    margin: 100px auto;
+    padding: 50px;
+    border: 2px solid gray;
+    line-height: 170%;
+}
+
+.culinary_dictionary h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.title_culinary_dictionary {
+    text-decoration: underline;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.text_culinary_dictionary {
+    margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+    .culinary_dictionary {
+        max-width: 400px;
+        padding: 30px;
+        margin-top: 50px;
+    }
+
+    .culinary_dictionary h1 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .title_culinary_dictionary {
+
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .text_culinary_dictionary {
+        margin-bottom: 20px;
+    }
+}
+
+
+/*-------------Модалка для связи----------------*/
+
+.paulund_modal {
+    width: 200px;
+    margin: 0 auto 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.popup {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: grey;
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 18px;
+    position: relative;
+}
+
+.popup input {
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 5px;
+    padding: 15px 25px;
+    width: 450px;
+}
+
+.popup h3 {
+    margin: 10px 0 10px 0;
+    font-size: 27px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.popup p {
+    margin-bottom: 15px;
+}
+
+.popups__inner {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.popups__inner.active {
+    display: flex;
+}
+
+.close_popup {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .popup {
+        max-width: 400px;
+    }
+
+    .popup input {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .popup h3 {
+        font-size: 20px;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .popup {
+        max-width: 300px;
+    }
+
+    .popup input {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+/*-------------------------*/
+.login_box_area {
+    height: 580px;
+    margin-top: 150px;
+}

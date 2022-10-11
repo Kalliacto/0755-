@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <title>Кулинарный блог</title>
+</head>
+
+<body class="page">
+    <div class="wrapper">
+        <header class="header container-fluid">
+            <div class="header_container">
+                <a href="#" class="header_logo logo">
+                    <img class="img_logo" src="img/Logo.png" alt="logo">
+                </a>
+                <nav class="header_menu ">
+                    <ul class="menu_list">
+                        <li class="menu_item">
+                            <a href="index.html" class="menu_link">Главная</a>
+                        </li>
+                        <li class="menu_item">
+                            <a href="#" class="menu_link">Блог</a>
+                        </li>
+                        <li class="menu_item">
+                            <a href="culinary_dictionary.html" class="menu_link">Кулинарный словарь</a>
+                        </li>
+                        <li class="menu_item">
+                            <div class="paulund_modal">
+                                <a href="#" class="menu_link click_me">Связаться с нами</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="login"><a href="autoriz.html"><i class="fa fa-sign-in" aria-hidden="true"></i></a></div>
+            <div class="theme">
+                <button class="theme-button" type="button">Изменить тему</button>
+            </div>
+        </header>
+        <main>
+            <!--recipe_day-->
+            <section class="recipe_day container mb-3">
+                <div class="title">
+                    <h2>Рецепт дня</h2>
+                </div>
+                <div class="row p-3">
+                    <div class="col-md-6 p-2">
+                        <div class="img_recipe_day">
+                            <img src="img/Toskan_sup.jpeg" alt="Toskan_sup">
+                        </div>
+                    </div>
+                    <div class="col-md-6 p-2">
+                        <div class="recipe_day_body mb-4">
+                            <h3 class="recipe_title">
+                                Тосканский суп с фаршем
+                            </h3>
+                            <div class="recipe_day_text">
+                                Безумно вкусный сливочный суп-пюре с кусочками мяса. Суп готовится очень просто и
+                                быстро.
+                                Из-за
+                                содержания различных трав, получается очень ароматным. Любители негустых сливочных супов
+                                обязательно придется по вкусу. По такому рецепту можно менять вкус блюда, изменяя вид
+                                мяса,
+                                из
+                                которого сделан фарш.
+                            </div>
+                            <!-- <a class="button_detailed_recipe button_one" href="Toskan_sup.html">Подробный
+                                рецепт</a> -->
+                        </div>
+                        <button class="button_detailed_recipe" onclick="document.location='Toskan_sup.html'">Подробный
+                            рецепт</button>
+                    </div>
+                </div>
+            </section>
+            <!--picture galery-->
+            <section class="picture ">
+                <div class="row">
+                    <div class="col-md-3 p-0"><img src="img/Steak.jpg" alt=""></div>
+                    <div class="col-md-3 p-0"><img src="img/Salat.jpg" alt=""></div>
+                    <div class="col-md-3 p-0"><img src="img/Chiken.jpg" alt=""></div>
+                    <div class="col-md-3 p-0"><img src="img/Meat.jpg" alt=""></div>
+                </div>
+            </section>
+            <!--new_recipe-->
+            <section class="new_recipe mb-3 md">
+                <div class="title_new_recipe">
+                    <h2 class="new_recipe_title">Новые рецепты</h2>
+                    <h4 class="m-3">Каждую неделю на нашем сайте мы выкладываем новые рецепты вкусных и сытных блюд
+                    </h4>
+                </div>
+                <div class="new_recipe_wrapper container d-flex">
+                    <div class="card p-2 m-3">
+                        <img src="img/Tartaletki.jpeg" class="card-img-top" alt="Tartaletki">
+                        <div class="card-body recipe_day_body">
+                            <h5 class="card-title recipe_title">Тарталетки с курицей, грибами и сыром</h5>
+                            <p class="card-text p-4">Самая любимая начинка для тарталеток. Очень быстрая, простая и
+                                вкусная
+                                закуска, которую
+                                легко
+                                приготовить к приходу неожиданных гостей и которая украсит любой стол.</p>
+                            <!-- <a class="button_detailed_recipe" href="Tartlets.html"></a> -->
+
+                        </div>
+                        <button class="button_detailed_recipe" onclick="document.location='Tartlets.html'">Подробный
+                            рецепт</button>
+                    </div>
+                    <div class="card p-2 m-3"">
+                        <img src=" img/Sup.jpg" class="card-img-top" alt="Sup">
+                        <div class="card-body recipe_day_body">
+                            <h5 class="card-title recipe_title">Суп-пюре из болгарского перца</h5>
+                            <p class="card-text p-4">Суп-пюре из перца - очень красивый и оригинальный крем-суп, который
+                                сразу
+                                подается с
+                                салатом. Думаю, этот пошаговый рецепт супа-пюре из перца с фото вас вдохновит на
+                                приготовление блюда - попробуйте!</p>
+                            <!-- <a class="button_detailed_recipe" href="Mashed_soup.html">Подробный рецепт</a> -->
+
+                        </div>
+                        <button class="button_detailed_recipe" onclick="document.location='Mashed_soup.html'">Подробный
+                            рецепт</button>
+                    </div>
+                </div>
+            </section>
+            <!--About me-->
+            <section class="wrapper_about_me container-fluid">
+                <div class="about_me">
+                    <div class="col-md-6 img_about_me">
+                        <img src="img/About.jpg" alt="About_me">
+                    </div>
+                    <div class="col-md-6 about_body">
+                        <h3 class="title_about">Обо мне</h3>
+                        <p class="about_text">
+                            Высокий уровень вовлечения представителей целевой аудитории является четким доказательством
+                            простого
+                            факта: курс на социально-ориентированный национальный проект предоставляет широкие
+                            возможности
+                            для
+                            экспериментов, поражающих по своей масштабности и грандиозности. Как уже неоднократно
+                            упомянуто,
+                            действия представителей оппозиции лишь добавляют фракционных разногласий и призваны к
+                            ответу.
+                            <br>
+                            <br>
+                            Учитывая ключевые сценарии поведения, высокое качество позиционных исследований
+                            предоставляет
+                            широкие возможности для глубокомысленных рассуждений. Банальные, но неопровержимые выводы, а
+                            также
+                            акционеры крупнейших компаний, инициированные исключительно синтетически, ограничены
+                            исключительно
+                            образом мышления.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="interesting_cooking container">
+                <div class="wrapper_interesting_cooking">
+                    <div class="title">
+                        <h2>Интересная готовка</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6"><img src="img/1.jpg" alt="Woman"></div>
+                        <div class="col-md-6 d-flex flex-wrap p-2">
+                            <div class="col-md-6">
+                                <img src="img/2.jpg" alt="2">
+                            </div>
+                            <div class="col-md-6">
+                                <img src="img/3.jpg" alt="3">
+                            </div>
+                            <div class="col-md-6">
+                                <img src="img/4.jpg" alt="4">
+                            </div>
+                            <div class="col-md-6">
+                                <img src="img/5.jpg" alt="5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+
+        <footer class="footer">
+            <div class="footer_text_body">
+                <h2 class="footer_title">Мы в соцсетях</h2>
+                <p class="footer_text">Присоединяйтесь к нам прямо сейчас</p>
+            </div>
+            <div class="icons d-flex ">
+                <div class="icon_item" style="background-color: #507299;"><a href="#"><i class="fa fa-vk"
+                            aria-hidden="true"></i></a></div>
+                <div class="icon_item" style="background-color: #3ebe2b;"><a href="#"><i class="fa fa-whatsapp"
+                            aria-hidden="true"></i></a></div>
+                <div class="icon_item" style="background-color: #e62117;"><a href="#"><i class="fa fa-youtube"
+                            aria-hidden="true"></i></a></div>
+                <div class="icon_item" style="background-color: #ee7808;"><a href="#"><i class="fa fa-odnoklassniki"
+                            aria-hidden="true"></i></a></div>
+                <div class="icon_item" style="background-color: #7d3daf;"><a href="#"><i class="fa fa-facebook-official"
+                            aria-hidden="true"></i></a></div>
+                <div class="icon_item" style="background-color: #08c;"><a href="#"><i class="fa fa-telegram"
+                            aria-hidden="true"></i></a></div>
+            </div>
+        </footer>
+        <!-------------------- Модалка для связи ------------------->
+        <div class="popups__inner">
+            <div class="popup callme__popup">
+                <a class="close_popup">X</a>
+                <h3>Мы с вами свяжемся!</h3>
+                <p>Отправьте заявку и мы перезвоним</p>
+                <form action="#">
+                    <input type="text" name="name" placeholder="Ваше имя">
+                    <input type="tel" name="tel" placeholder="Ваш номер телефона">
+                    <input type="submit" value="Отправить">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.6.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
