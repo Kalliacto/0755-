@@ -34,6 +34,12 @@ h1 {
     font-size: 36px;
 }
 
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 /* Выставляем основные настройки по-умолчанию для body */
 body {
     font-family: 'Montserrat', sans-serif;
@@ -238,6 +244,7 @@ a:hover {
     }
 }
 
+
 /*--------------Для темы---------------------*/
 .theme {
     display: flex;
@@ -245,6 +252,7 @@ a:hover {
     align-items: center;
     padding: 10px;
     font-size: 18px;
+    margin-right: 40px;
 }
 
 .theme-button {
@@ -336,7 +344,7 @@ a:hover {
 .picture {
     width: 100%;
     margin: 40px 0 60px 0;
-    padding: 10px;
+
 }
 
 @media (max-width: 767px) {
@@ -660,7 +668,7 @@ a:hover {
 
 /*---------------culinary_dictionary-text---------------------------*/
 
-.culinary_dictionary {
+.culinary__dictionary {
     width: 900px;
     margin: 100px auto;
     padding: 50px;
@@ -800,4 +808,53 @@ a:hover {
 .login_box_area {
     height: 580px;
     margin-top: 150px;
+}
+
+/*------------Кнопка вверх-------------*/
+.btn-up {
+    position: fixed;
+    background-color: rgba(255, 135, 24, 1);
+    right: 100px;
+    bottom: 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 50px;
+    transition: opacity 0.15s ease-in-out, transform 0.3s ease-in-out;
+    color: #fff;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn-up::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3E%3C/svg%3E");
+}
+
+.btn-up_hide {
+    display: none;
+}
+
+.btn-up_hiding {
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+.btn-up-icon {
+    width: 40px;
+    height: 40px;
+    fill: currentcolor;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .btn-up:hover {
+        background-color: #ef6c00;
+    }
 }
